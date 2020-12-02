@@ -10,6 +10,7 @@
 
 import Foundation
 import CoreGraphics
+import UIKit
 
 extension CGPoint {
     fileprivate func distanceToLine(from linePoint1: CGPoint, to linePoint2: CGPoint) -> CGFloat {

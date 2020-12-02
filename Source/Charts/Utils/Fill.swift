@@ -28,7 +28,7 @@ public class EmptyFill: NSObject, Fill
 }
 
 @objc(ChartColorFill)
-public class ColorFill: NSObject, Fill
+open class ColorFill: NSObject, Fill
 {
 
     @objc public let color: CGColor
@@ -44,7 +44,7 @@ public class ColorFill: NSObject, Fill
         self.init(cgColor: color.cgColor)
     }
 
-    public func fillPath(context: CGContext, rect: CGRect)
+    open func fillPath(context: CGContext, rect: CGRect)
     {
         context.saveGState()
         defer { context.restoreGState() }
