@@ -50,7 +50,7 @@ public enum ChartEasingOption: Int
 
 public typealias ChartEasingFunctionBlock = ((_ elapsed: TimeInterval, _ duration: TimeInterval) -> Double)
 
-internal func easingFunctionFromOption(_ easing: ChartEasingOption) -> ChartEasingFunctionBlock
+public func easingFunctionFromOption(_ easing: ChartEasingOption) -> ChartEasingFunctionBlock
 {
     switch easing
     {
