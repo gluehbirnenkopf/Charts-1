@@ -19,6 +19,6 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0")
     ],
     targets: [
-        .target(name: "Charts", dependencies: [])
+        .target(name: "Charts", dependencies: [.product(name: "Algorithms", package: "swift-algorithms")])
     ]
 )
