@@ -60,7 +60,7 @@ open class AnimatedZoomViewJob: AnimatedViewPortJob
             easing: easing)
     }
     
-    internal override func animationUpdate()
+    override open func animationUpdate()
     {
         let scaleX = xOrigin + (self.scaleX - xOrigin) * phase
         let scaleY = yOrigin + (self.scaleY - yOrigin) * phase
@@ -82,7 +82,7 @@ open class AnimatedZoomViewJob: AnimatedViewPortJob
         viewPortHandler.refresh(newMatrix: matrix, chart: view, invalidate: true)
     }
     
-    internal override func animationEnd()
+    override open func animationEnd()
     {
         (view as? BarLineChartViewBase)?.calculateOffsets()
         view.setNeedsDisplay()

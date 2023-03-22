@@ -1,14 +1,11 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
+
 import PackageDescription
 
 let package = Package(
     name: "Charts",
-    platforms: [
-          .iOS(.v9),
-          .tvOS(.v9),
-          .macOS(.v10_11),
-    ],
+    platforms: [.iOS(.v11)],
     products: [
         .library(
             name: "Charts",
@@ -18,8 +15,10 @@ let package = Package(
             type: .dynamic,
             targets: ["Charts"])
     ],
-    targets: [
-        .target(name: "Charts")
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0")
     ],
-    swiftLanguageVersions: [.v5]
+    targets: [
+        .target(name: "Charts", dependencies: [.product(name: "Algorithms", package: "swift-algorithms")])
+    ]
 )

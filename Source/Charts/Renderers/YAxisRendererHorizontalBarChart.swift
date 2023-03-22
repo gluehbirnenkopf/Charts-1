@@ -9,8 +9,7 @@
 //  https://github.com/danielgindi/Charts
 //
 
-import Foundation
-import CoreGraphics
+import UIKit
 
 open class YAxisRendererHorizontalBarChart: YAxisRenderer
 {
@@ -258,7 +257,7 @@ open class YAxisRendererHorizontalBarChart: YAxisRenderer
                 let xOffset = l.lineWidth + l.xOffset
                 let yOffset = 2.0 + l.yOffset
 
-                let align: NSTextAlignment
+                let align: TextAlignment
                 let point: CGPoint
 
                 switch l.labelPosition
